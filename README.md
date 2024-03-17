@@ -28,13 +28,9 @@ The dataset consists of email samples labeled as spam or ham. Each sample may in
 4. Use the classifier function to predict whether a given email is spam or ham.
 
 ## Example Usage
-```python
-from email_classifier import EmailClassifier
-
-# Instantiate the EmailClassifier with the trained model
-classifier = EmailClassifier(model)
 
 
+# In the input field just imput for your own email
 # Sample input email
 input = ["Congratulations! You have been selected as the winner of our monthly prize draw. You've won a brand new iPhone 12 Pro Max!To claim your prize, simply click on the link below and provide your shipping details. Hurry, as this offer is only valid for the next 24 hours!Please note that failure to claim your prize within the specified time frame will result in forfeiture.Thank you for participating in our contest, and we look forward to hearing from you soon!"]
 
@@ -44,7 +40,7 @@ input_features = feature_extraction.transform(input)
 # Predict whether the emails are spam or ham
 predInput = model.predict(input_features)
 
-#Print the output to know whether the input email is a spam or ham
+# Print the output to know whether the input email is a spam or ham
 print(predInput)
 
 if(predInput[0] == 1):
